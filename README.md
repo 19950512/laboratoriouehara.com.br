@@ -1,3 +1,3 @@
-# Laboratório Uehara - Website
+# Laboratório Uehara
 
-<img src="./assets/images/homepage.png" />
+<img src="./assets/images/homepage-site.png" />
