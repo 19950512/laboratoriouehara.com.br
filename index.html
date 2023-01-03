@@ -354,6 +354,14 @@
 Já que somos eternos aprendizes nessa vida, consideramos fundamentais o ensino e a aprendizagem, dois dos principais pilares que sustentam nosso trabalho e nossa marca. E é esse conceito que priorizaremos juntamente com a nossa presença aqui nas redes sociais.
             </p>
 
+            <br>
+            <p class="section-text">
+            São <strong>Próteses finas, lâminas, lentes de contatos ou facetas</strong>, utilizadas para cobrir as faces dos dentes — daí o nome mais comum dado a esse tipo de prótese, conferem aos pacientes uma melhor aparência estética ao sorrir.
+Assim como nossos demais produtos, o planejamento clínico é fundamental para o sucesso no resultado final.<br>
+O processo inicia normalmente com o planejamento digital, que depois de aprovado é encaminhado para a produção, seja no modelo injetado ou fresado, a escolha é feita de acordo com o que proporcionará o melhor resultado.<br>
+Posteriormente, segue para acabamento, estratificado ou maquiado, de acordo com a escolha do profissional.<br> A finalização será feita individualmente por um profissional que aplicará todo o seu conhecimento e experiência técnica.<br> E o resultado é sempre incrível!<br> 
+<br>Quer conhecer nosso trabalho?<br> <strong>Entre em contato através do WhatsApp (54) 99679-7786.</strong>
+              </p>
             <a href="https://www.facebook.com/ueharalab" target="_blank" class="btn">saiba mais</a>
 
           </div>
@@ -1033,7 +1041,66 @@ Já que somos eternos aprendizes nessa vida, consideramos fundamentais o ensino 
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script>
+
+
+/**
+ * addEvent on element
+ */
+
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
+  }
+}
+
+
+
+/**
+ * navbar toggle
+ */
+
+const navbar = document.querySelector("[data-navbar]");
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
+const navbarToggler = document.querySelector("[data-nav-toggler]");
+
+const toggleNav = function () {
+  navbar.classList.toggle("active");
+  navbarToggler.classList.toggle("active");
+}
+
+addEventOnElem(navbarToggler, "click", toggleNav);
+
+const closeNav = function () {
+  navbar.classList.remove("active");
+  navbarToggler.classList.remove("active");
+}
+
+addEventOnElem(navbarLinks, "click", closeNav);
+
+
+
+/**
+ * header active
+ */
+
+const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
+});
+  </script>
 
   <!-- 
     - ionicon link
