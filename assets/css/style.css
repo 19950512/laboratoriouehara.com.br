@@ -249,7 +249,7 @@ body {
 
 .header-bottom.active {
   position: fixed;
-  top: -133px;
+  top: -84px;
   background-color: var(--white);
   box-shadow: var(--shadow-2);
   animation: slideIn 0.5s var(--cubic-out) forwards;
@@ -946,6 +946,9 @@ body {
 /**
  * responsive for larger than 992px screen
  */
+  @media (max-width: 455px) {
+    .header-bottom.active { top: -135px; }
+  }
 
 @media (min-width: 992px) {
 
@@ -1199,4 +1202,24 @@ body {
 
   .cta-banner { margin-block-start: -120px; }
 
+}
+
+
+@media (min-width: 1024px) {
+
+  .section .hero{
+    height: calc(100vh - 58px);
+    padding-bottom: 0;
+  }
+  .container {
+    align-items: center;
+    gap: 0;
+    height: 100%;
+  }
+  .hero-banner {
+    align-self: end;
+  }
+  .hero-banner img {
+    width: 130%;
+  }
 }
